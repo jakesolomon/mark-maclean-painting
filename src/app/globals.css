@@ -35,8 +35,6 @@
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --font-display: 'Fraunces', serif;
-    --font-body: 'Inter', sans-serif;
     --shadow-card: 0 18px 38px -10px rgba(0,0,0,0.08), 0 6px 12px -6px rgba(0,0,0,0.04);
     --transition-brand: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 

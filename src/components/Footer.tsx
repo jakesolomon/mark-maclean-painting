@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Instagram, Facebook } from "lucide-react";
 import { services, cities, BUSINESS_NAME, PHONE_NUMBER } from "@/data/siteData";
 
@@ -38,7 +38,7 @@ const Footer = () => (
           <ul className="space-y-2">
             {services.map(s => (
               <li key={s.slug}>
-                <Link to={`/${s.slug}`} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link href={`/${s.slug}`} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   {s.name}
                 </Link>
               </li>
@@ -50,7 +50,7 @@ const Footer = () => (
           <ul className="space-y-2">
             {cities.map(c => (
               <li key={c.slug}>
-                <Link to={`/${c.slug}`} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link href={`/${c.slug}`} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   {c.name}, {c.state}
                 </Link>
               </li>
@@ -60,9 +60,9 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2">
-            <li><Link to="/services" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">All Services</Link></li>
-            <li><Link to="/areas" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Areas Served</Link></li>
-            <li><Link to="/gallery" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Gallery</Link></li>
+            <li><Link href="/services" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">All Services</Link></li>
+            <li><Link href="/areas" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Areas Served</Link></li>
+            <li><Link href="/gallery" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Gallery</Link></li>
           </ul>
         </div>
       </div>
