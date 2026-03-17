@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import { Shield, Award, ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
@@ -7,8 +7,9 @@ import { FadeIn } from "@/components/FadeIn";
 import { getCityBySlug, services } from "@/data/siteData";
 
 const CityPage = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const city = getCityBySlug(slug || "");
+  const location = useLocation();
+  const slug = location.pathname.slice(1);
+  const city = getCityBySlug(slug);
 
   if (!city) return <Navigate to="/404" replace />;
 
