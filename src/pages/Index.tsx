@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Award, Clock, ArrowRight } from "lucide-react";
+import { Shield, Award, Clock, ArrowRight, Star } from "lucide-react";
 import Layout from "@/components/Layout";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import SEOHead from "@/components/SEOHead";
@@ -32,10 +32,28 @@ const trustItems = [
   { icon: Clock, label: "98% On-Time Completion" },
 ];
 
+const testimonials = [
+  {
+    name: "Sarah M.",
+    rating: 5,
+    text: "Mark and his team painted the entire exterior of our Andover colonial. The prep work was thorough and the finished result looks incredible. We couldn't be happier with the quality.",
+  },
+  {
+    name: "David R.",
+    rating: 5,
+    text: "Had our kitchen cabinets painted instead of replacing them. The finish is smooth and flawless — everyone thinks they're brand new. Highly recommend Mark MacLean Painting.",
+  },
+  {
+    name: "Jennifer L.",
+    rating: 5,
+    text: "Professional from start to finish. They covered everything, fixed some drywall issues we didn't even ask about, and left our home cleaner than they found it. Will use again for sure.",
+  },
+];
+
 const Index = () => (
   <Layout>
     <SEOHead
-      title="Professional Painters Merrimack Valley MA | Licensed & Insured"
+      title="Professional Painter in Merrimack Valley, MA | Mark MacLean Painting"
       description="Professional painting services in the Merrimack Valley. Interior, exterior, cabinet painting & more. Serving Andover, Haverhill, Lowell, Methuen & surrounding towns."
       canonical={`${BASE_URL}/`}
       jsonLd={jsonLd}
@@ -100,8 +118,41 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Areas Served */}
+    {/* Testimonials */}
     <section className="section-gradient py-20">
+      <div className="container-site">
+        <FadeIn>
+          <h2 className="text-display text-3xl md:text-4xl mb-4">What Our Clients Say</h2>
+          <p className="text-muted-foreground mb-12 max-w-xl">Hear from homeowners across the Merrimack Valley.</p>
+        </FadeIn>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <FadeIn key={t.name} delay={i * 0.1}>
+              <div className="card-elevated p-8">
+                <div className="flex gap-0.5 mb-4">
+                  {Array.from({ length: t.rating }).map((_, j) => (
+                    <Star key={j} className="w-5 h-5 fill-accent text-accent" />
+                  ))}
+                </div>
+                <p className="text-foreground text-sm leading-relaxed mb-6">"{t.text}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                    <span className="text-accent font-display font-bold text-sm">{t.name[0]}</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">{t.name}</p>
+                    <p className="text-xs text-muted-foreground">Google Review</p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Areas Served */}
+    <section className="py-20">
       <div className="container-site">
         <FadeIn>
           <h2 className="text-display text-3xl md:text-4xl mb-4">Areas We Serve</h2>
@@ -125,7 +176,7 @@ const Index = () => (
     </section>
 
     {/* Lead Capture */}
-    <section className="py-20">
+    <section className="py-20 section-gradient" id="quote">
       <div className="container-site max-w-xl">
         <FadeIn>
           <LeadCaptureForm />
