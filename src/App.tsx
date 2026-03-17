@@ -9,6 +9,7 @@ import ServicesHub from "./pages/ServicesHub";
 import ServicePage from "./pages/ServicePage";
 import AreasHub from "./pages/AreasHub";
 import CityPage from "./pages/CityPage";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 import { services, cities } from "./data/siteData";
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<ServicesHub />} />
             <Route path="/areas" element={<AreasHub />} />
+            <Route path="/gallery" element={<Gallery />} />
             {serviceSlugs.map(slug => (
               <Route key={`s-${slug}`} path={`/${slug}`} element={<ServicePage />} />
             ))}

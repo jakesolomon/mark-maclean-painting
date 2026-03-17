@@ -8,7 +8,10 @@ const UtilityBar = () => (
       <Link to="/" className="text-display text-lg text-primary">
         {BUSINESS_NAME}
       </Link>
-      <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
+      <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
+        <Link to="/services" className="hover:text-foreground transition-colors">Services</Link>
+        <Link to="/areas" className="hover:text-foreground transition-colors">Areas</Link>
+        <Link to="/gallery" className="hover:text-foreground transition-colors">Gallery</Link>
         <span className="flex items-center gap-1.5">
           <Shield className="w-4 h-4" />
           Licensed &amp; Insured
@@ -17,7 +20,7 @@ const UtilityBar = () => (
           <Award className="w-4 h-4" />
           {LICENSE_NUMBER}
         </span>
-      </div>
+      </nav>
       <div className="flex items-center gap-4">
         <a href={`tel:${PHONE_NUMBER.replace(/[^0-9]/g, "")}`} className="flex items-center gap-2 text-sm font-medium text-primary">
           <Phone className="w-4 h-4" />
