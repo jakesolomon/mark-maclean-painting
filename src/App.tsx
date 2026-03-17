@@ -29,10 +29,10 @@ const App = () => (
             <Route path="/services" element={<ServicesHub />} />
             <Route path="/areas" element={<AreasHub />} />
             {serviceSlugs.map(slug => (
-              <Route key={slug} path={`/${slug}`} element={<ServicePage />} />
+              <Route key={`s-${slug}`} path={`/${slug}`} element={<ServicePage />} />
             ))}
             {citySlugs.map(slug => (
-              <Route key={slug} path={`/${slug}`} element={<CityPage />} />
+              <Route key={`c-${slug}`} path={`/${slug}`} element={<CityPage />} />
             ))}
             <Route path="*" element={<NotFound />} />
           </Routes>
