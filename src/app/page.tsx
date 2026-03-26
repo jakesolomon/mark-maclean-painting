@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, Award, Clock, ArrowRight, Star } from "lucide-react";
+import { Shield, FileText, ArrowRight, Star } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { services, cities, BUSINESS_NAME, PHONE_NUMBER } from "@/data/siteData";
@@ -35,9 +35,9 @@ const jsonLd = {
 };
 
 const trustItems = [
-  { icon: Shield, label: "Licensed & Insured" },
-  { icon: Award, label: "Lead-Safe Certified" },
-  { icon: Clock, label: "98% On-Time Completion" },
+  { icon: Shield, label: "Fully Insured" },
+  { icon: FileText, label: "Fast, Free Estimates" },
+  { icon: Star, label: "5-Star Rated" },
 ];
 
 const testimonials = [
