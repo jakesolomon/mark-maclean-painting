@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FadeIn } from "@/components/FadeIn";
-import { galleryImages } from "@/data/siteData";
+import { galleryImages } from "@/data/gallery";
+import { services } from "@/data/siteData";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -38,20 +39,22 @@ export default function Gallery() {
           {galleryImages.map((img, i) => (
             <FadeIn key={i} delay={i * 0.04}>
               <div className="break-inside-avoid rounded-lg overflow-hidden">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={600}
-                  height={400}
-                  className="w-full object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
+                <div className="overflow-hidden">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={600}
+                    height={400}
+                    className="w-full object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
                 <div className="bg-card px-4 py-3">
                   <span className="text-xs font-medium text-accent uppercase tracking-wider">
-                    {img.category}
+                    {services.find((s) => s.slug === img.service)?.name}
                   </span>
                   <p className="text-sm text-muted-foreground mt-1">
-                    {img.alt}
+                    {img.town}, {img.state}
                   </p>
                 </div>
               </div>

@@ -19,7 +19,6 @@ export interface ServiceInfo {
   processSteps: { step: string; title: string; desc: string }[];
   relatedSlugs: string[];
   whyChooseUs: WhyChooseItem[];
-  galleryImages: { src: string; alt: string }[];
 }
 
 export interface CityInfo {
@@ -51,13 +50,6 @@ export const services: ServiceInfo[] = [
       { icon: "Droplets", title: "Moisture Protection", desc: "Paint selection and application engineered to resist fading, peeling, and water damage." },
       { icon: "Building2", title: "Residential & Commercial", desc: "Full exteriors or focused work on trim, windows, and doors for any property type." },
     ],
-    galleryImages: [
-      { src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop", alt: "Freshly painted home exterior" },
-      { src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop", alt: "White exterior paint finish" },
-      { src: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&h=400&fit=crop", alt: "Painted house with trim detail" },
-      { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop", alt: "Exterior painting project complete" },
-      { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop", alt: "Home exterior after painting" },
-    ],
   },
   {
     slug: "interior-painting",
@@ -79,12 +71,6 @@ export const services: ServiceInfo[] = [
       { icon: "Wrench", title: "Prep Before Paint", desc: "We address caulking and drywall issues before any paint goes on the wall." },
       { icon: "Layers", title: "Multiple Coats", desc: "High-quality interior paint applied in multiple coats for even, lasting coverage." },
       { icon: "Home", title: "Any Room, Any Size", desc: "Full rooms or smaller jobs on walls, ceilings, trim, and doors." },
-    ],
-    galleryImages: [
-      { src: "https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?w=600&h=400&fit=crop", alt: "Interior room freshly painted" },
-      { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop", alt: "Living room with fresh paint" },
-      { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop", alt: "Bedroom painting project" },
-      { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop", alt: "Interior walls and trim painting" },
     ],
   },
   {
@@ -108,12 +94,6 @@ export const services: ServiceInfo[] = [
       { icon: "ShieldCheck", title: "Built to Last", desc: "Two or more coats of high-quality paint rated for heavy daily use." },
       { icon: "PiggyBank", title: "Cost-Effective Alternative", desc: "Kitchen cabinets, bathroom vanities, and built-ins refreshed at a fraction of replacement cost." },
     ],
-    galleryImages: [
-      { src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop", alt: "Freshly painted kitchen cabinets" },
-      { src: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&h=400&fit=crop", alt: "White painted cabinets" },
-      { src: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&h=400&fit=crop", alt: "Kitchen cabinet refinishing" },
-      { src: "https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?w=600&h=400&fit=crop", alt: "Painted vanity cabinets" },
-    ],
   },
   {
     slug: "drywall-repair",
@@ -135,12 +115,6 @@ export const services: ServiceInfo[] = [
       { icon: "Puzzle", title: "Texture Matching", desc: "Repairs are blended to match existing wall texture for a seamless result." },
       { icon: "Paintbrush", title: "Paint-Ready Finish", desc: "Walls are left smooth and primed, ready for a flawless coat of paint." },
       { icon: "ArrowRightLeft", title: "Pairs with Painting", desc: "Commonly needed before interior painting — we handle both in one project." },
-    ],
-    galleryImages: [
-      { src: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&h=400&fit=crop", alt: "Drywall repair in progress" },
-      { src: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600&h=400&fit=crop", alt: "Smooth wall after repair" },
-      { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&h=400&fit=crop", alt: "Wall patching work" },
-      { src: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&h=400&fit=crop", alt: "Finished drywall repair" },
     ],
   },
   {
@@ -164,12 +138,6 @@ export const services: ServiceInfo[] = [
       { icon: "Ruler", title: "Clean Lines", desc: "Sharp, clean edges at ceilings and baseboards — no rough cuts or gaps." },
       { icon: "Building2", title: "Accent Walls or Full Rooms", desc: "Single statement walls or entire rooms, for residential and commercial spaces." },
     ],
-    galleryImages: [
-      { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=400&fit=crop", alt: "Wallpaper accent wall" },
-      { src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=400&fit=crop", alt: "Patterned wallpaper installation" },
-      { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop", alt: "Room with wallpaper feature" },
-      { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop", alt: "Finished wallpaper project" },
-    ],
   },
   {
     slug: "wallpaper-removal",
@@ -191,12 +159,6 @@ export const services: ServiceInfo[] = [
       { icon: "Eraser", title: "Full Adhesive Removal", desc: "All adhesive residue is cleaned away — no sticky patches left behind." },
       { icon: "Wrench", title: "Pre-Existing Damage Repaired", desc: "Any damage found behind the wallpaper is repaired before we finish." },
       { icon: "Paintbrush", title: "Smooth, Paint-Ready Walls", desc: "Walls are left smooth and ready for a fresh coat of paint or new wallpaper." },
-    ],
-    galleryImages: [
-      { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop", alt: "Wall after wallpaper removal" },
-      { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop", alt: "Clean wall surface" },
-      { src: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600&h=400&fit=crop", alt: "Smooth wall ready for paint" },
-      { src: "https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?w=600&h=400&fit=crop", alt: "Room after wallpaper stripping" },
     ],
   },
   {
@@ -220,12 +182,6 @@ export const services: ServiceInfo[] = [
       { icon: "Layers", title: "Even Application", desc: "Stain is applied evenly, working with the wood grain for a natural finish." },
       { icon: "Armchair", title: "Furniture to Decks", desc: "From fine furniture and cabinets to large decks and railings." },
     ],
-    galleryImages: [
-      { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop", alt: "Stained wood deck" },
-      { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop", alt: "Wood staining project" },
-      { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop", alt: "Interior wood trim staining" },
-      { src: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&h=400&fit=crop", alt: "Stained railing detail" },
-    ],
   },
   {
     slug: "pressure-washing",
@@ -248,12 +204,6 @@ export const services: ServiceInfo[] = [
       { icon: "LayoutGrid", title: "All Surface Types", desc: "Siding, decks, driveways, sidewalks, fences, and patios — we clean them all." },
       { icon: "Building2", title: "Residential & Commercial", desc: "Professional-grade pressure washing for homes and commercial properties." },
     ],
-    galleryImages: [
-      { src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop", alt: "Pressure washing driveway" },
-      { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop", alt: "Clean siding after pressure wash" },
-      { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop", alt: "Deck after pressure washing" },
-      { src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop", alt: "Home exterior after cleaning" },
-    ],
   },
 ];
 
@@ -272,24 +222,6 @@ export const cities: CityInfo[] = [
   { slug: "wilmington", name: "Wilmington", state: "MA", contextualCopy: "Wilmington's go-to painters for residential interior and exterior projects. Quality prep, quality paint, quality results." },
 ];
 
-export const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop", alt: "Exterior painting project", category: "Exterior" },
-  { src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop", alt: "White home exterior", category: "Exterior" },
-  { src: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&h=400&fit=crop", alt: "Painted home with trim", category: "Exterior" },
-  { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop", alt: "Completed exterior project", category: "Exterior" },
-  { src: "https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?w=600&h=400&fit=crop", alt: "Interior room painting", category: "Interior" },
-  { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop", alt: "Living room with fresh paint", category: "Interior" },
-  { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop", alt: "Bedroom painting project", category: "Interior" },
-  { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop", alt: "Interior walls and trim", category: "Interior" },
-  { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop", alt: "Home after renovation", category: "Interior" },
-  { src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop", alt: "Painted kitchen cabinets", category: "Cabinets" },
-  { src: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&h=400&fit=crop", alt: "White cabinet finish", category: "Cabinets" },
-  { src: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&h=400&fit=crop", alt: "Kitchen cabinet refinishing", category: "Cabinets" },
-  { src: "https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?w=600&h=400&fit=crop", alt: "Bathroom vanity painting", category: "Cabinets" },
-  { src: "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&h=400&fit=crop", alt: "Stained wood detail", category: "Interior" },
-  { src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=400&fit=crop", alt: "Wallpaper accent wall", category: "Interior" },
-  { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=400&fit=crop", alt: "Feature wall installation", category: "Interior" },
-];
 
 export const getServiceBySlug = (slug: string) => services.find(s => s.slug === slug);
 export const getCityBySlug = (slug: string) => cities.find(c => c.slug === slug);

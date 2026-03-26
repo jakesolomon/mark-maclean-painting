@@ -13,6 +13,7 @@ import {
   type ServiceInfo,
   type CityInfo,
 } from "@/data/siteData";
+import { getImagesByService } from "@/data/gallery";
 
 const DynamicIcon = ({
   name,
@@ -65,6 +66,7 @@ function ServiceContent({ service }: { service: ServiceInfo }) {
   const related = service.relatedSlugs
     .map((s) => services.find((sv) => sv.slug === s))
     .filter(Boolean);
+  const serviceImages = getImagesByService(service.slug);
 
   return (
     <>
@@ -152,32 +154,41 @@ function ServiceContent({ service }: { service: ServiceInfo }) {
       </section>
 
       {/* Gallery */}
-      <section className="py-20">
-        <div className="container-site">
-          <FadeIn>
-            <h2 className="text-display text-3xl mb-2">Our Work</h2>
-            <p className="text-muted-foreground mb-12">
-              Examples of our {service.name.toLowerCase()} projects.
-            </p>
-          </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {service.galleryImages.map((img, i) => (
-              <FadeIn key={i} delay={i * 0.06}>
-                <div className="rounded-lg overflow-hidden">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={600}
-                    height={400}
-                    className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-              </FadeIn>
-            ))}
+      {serviceImages.length > 0 && (
+        <section className="py-20">
+          <div className="container-site">
+            <FadeIn>
+              <h2 className="text-display text-3xl mb-2">Our Work</h2>
+              <p className="text-muted-foreground mb-12">
+                Examples of our {service.name.toLowerCase()} projects.
+              </p>
+            </FadeIn>
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+              {serviceImages.map((img, i) => (
+                <FadeIn key={i} delay={i * 0.06}>
+                  <div className="break-inside-avoid rounded-lg overflow-hidden">
+                    <div className="overflow-hidden">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        width={600}
+                        height={400}
+                        className="w-full object-cover hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                    <div className="bg-card px-4 py-3">
+                      <p className="text-sm text-muted-foreground">
+                        {img.town}, {img.state}
+                      </p>
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Related Services */}
       {related.length > 0 && (
