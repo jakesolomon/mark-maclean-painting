@@ -127,32 +127,6 @@ function ServiceContent({ service }: { service: ServiceInfo }) {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="section-gradient py-20">
-        <div className="container-site">
-          <FadeIn>
-            <h2 className="text-display text-3xl mb-12">Our Process</h2>
-          </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {service.processSteps.map((step, i) => (
-              <FadeIn key={step.step} delay={i * 0.1}>
-                <div className="card-elevated p-6">
-                  <span className="text-accent font-display font-bold text-2xl tabular-nums">
-                    {step.step}
-                  </span>
-                  <h3 className="text-display text-lg mt-2 mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {step.desc}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Gallery */}
       {serviceImages.length > 0 && (
         <section className="py-20">

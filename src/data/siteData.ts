@@ -16,7 +16,6 @@ export interface ServiceInfo {
   metaTitle: string;
   metaDesc: string;
   h1: string;
-  processSteps: { step: string; title: string; desc: string }[];
   relatedSlugs: string[];
   whyChooseUs: WhyChooseItem[];
 }
@@ -37,12 +36,6 @@ export const services: ServiceInfo[] = [
     metaTitle: "Exterior Painting in Merrimack Valley, MA | Mark MacLean Painting",
     metaDesc: "Professional exterior painting in the Merrimack Valley. Thorough prep, two-coat minimum, and moisture-resistant finishes. Licensed & Insured. Free estimates.",
     h1: "Exterior Painting",
-    processSteps: [
-      { step: "01", title: "Inspect & Repair", desc: "Full exterior inspection. Scrape, sand, and repair damaged surfaces." },
-      { step: "02", title: "Power Wash", desc: "Remove dirt, mildew, and loose paint with controlled pressure washing." },
-      { step: "03", title: "Prime & Caulk", desc: "Spot-prime bare wood and caulk all joints and gaps." },
-      { step: "04", title: "Apply Finish Coats", desc: "Two coats of premium exterior paint, brushed and rolled for durability." },
-    ],
     relatedSlugs: ["interior-painting", "pressure-washing", "wood-staining"],
     whyChooseUs: [
       { icon: "Layers", title: "Surface Prep First", desc: "We remove old paint and check for rotted or damaged siding before touching a brush." },
@@ -59,12 +52,6 @@ export const services: ServiceInfo[] = [
     metaTitle: "Interior Painting in Merrimack Valley, MA | Mark MacLean Painting",
     metaDesc: "Expert interior painting in the Merrimack Valley. Full protection, drywall prep, and multiple coats of quality paint. Licensed & Insured. Free estimates.",
     h1: "Interior Painting",
-    processSteps: [
-      { step: "01", title: "Protect & Prep", desc: "Cover floors, furniture, and fixtures. Patch holes and sand smooth." },
-      { step: "02", title: "Prime Surfaces", desc: "Apply primer to new drywall, stains, and color-change areas." },
-      { step: "03", title: "Cut-In & Roll", desc: "Hand-cut edges for crisp lines, then roll walls for even coverage." },
-      { step: "04", title: "Final Inspection", desc: "Touch up, clean up, and walk through with you for approval." },
-    ],
     relatedSlugs: ["exterior-painting", "cabinet-painting", "drywall-repair"],
     whyChooseUs: [
       { icon: "ShieldCheck", title: "Full Protection", desc: "Floors and furniture are covered before we start — no mess, no damage." },
@@ -81,12 +68,6 @@ export const services: ServiceInfo[] = [
     metaTitle: "Cabinet Painting in Merrimack Valley, MA | Mark MacLean Painting",
     metaDesc: "Professional cabinet painting in the Merrimack Valley. Hardware removed, clean edges, and durable multi-coat finishes. Licensed & Insured.",
     h1: "Cabinet Painting",
-    processSteps: [
-      { step: "01", title: "Prep & Mask", desc: "Remove doors, drawers, and hardware. Mask all adjacent surfaces." },
-      { step: "02", title: "Sand & Prime", desc: "Degloss and sand all surfaces. Apply bonding primer." },
-      { step: "03", title: "Apply Finish Coats", desc: "Two or more coats of high-quality cabinet paint for a durable finish." },
-      { step: "04", title: "Hardware Re-install", desc: "Reinstall doors, drawers, and hardware. Final quality check." },
-    ],
     relatedSlugs: ["interior-painting", "wood-staining"],
     whyChooseUs: [
       { icon: "Unplug", title: "Hardware Removed", desc: "Doors and hardware come off before we start — ensuring full coverage on every surface." },
@@ -103,12 +84,6 @@ export const services: ServiceInfo[] = [
     metaTitle: "Drywall Repair in Merrimack Valley, MA | Mark MacLean Painting",
     metaDesc: "Expert drywall repair in the Merrimack Valley. Cracks, holes, and moisture damage fixed with seamless texture matching. Licensed & Insured.",
     h1: "Drywall Repair",
-    processSteps: [
-      { step: "01", title: "Assess Damage", desc: "Evaluate the size and cause of drywall damage." },
-      { step: "02", title: "Cut & Patch", desc: "Cut clean edges, install backing, and set new drywall." },
-      { step: "03", title: "Tape & Mud", desc: "Apply joint tape and multiple coats of compound, sanding between." },
-      { step: "04", title: "Texture & Prime", desc: "Match surrounding texture, prime, and prepare for paint." },
-    ],
     relatedSlugs: ["interior-painting", "wallpaper-removal"],
     whyChooseUs: [
       { icon: "Scan", title: "Full Damage Assessment", desc: "We evaluate cracks, holes, moisture, and mold damage before making any repairs." },
@@ -125,12 +100,6 @@ export const services: ServiceInfo[] = [
     metaTitle: "Wallpaper Hanging in Merrimack Valley, MA | Mark MacLean Painting",
     metaDesc: "Professional wallpaper hanging in the Merrimack Valley. Precise pattern matching, clean lines, and expert surface prep. Licensed & Insured.",
     h1: "Wallpaper Hanging",
-    processSteps: [
-      { step: "01", title: "Wall Prep", desc: "Clean, smooth, and prime walls for optimal adhesion." },
-      { step: "02", title: "Measure & Cut", desc: "Measure drops, match patterns, and cut with precision." },
-      { step: "03", title: "Apply & Smooth", desc: "Apply adhesive, hang panels, and smooth out bubbles." },
-      { step: "04", title: "Trim & Inspect", desc: "Trim edges, check seams, and clean excess adhesive." },
-    ],
     relatedSlugs: ["wallpaper-removal", "interior-painting"],
     whyChooseUs: [
       { icon: "Wrench", title: "Surface Prep & Repair", desc: "Walls are prepped and repaired as needed before any wallpaper goes up." },
@@ -147,12 +116,6 @@ export const services: ServiceInfo[] = [
     metaTitle: "Wallpaper Removal in Merrimack Valley, MA | Mark MacLean Painting",
     metaDesc: "Professional wallpaper removal in the Merrimack Valley. Damage-free stripping, adhesive cleanup, and smooth wall prep. Licensed & Insured.",
     h1: "Wallpaper Removal",
-    processSteps: [
-      { step: "01", title: "Score & Steam", desc: "Score the wallpaper surface and apply steam to loosen adhesive." },
-      { step: "02", title: "Strip Panels", desc: "Carefully remove wallpaper panels without damaging drywall." },
-      { step: "03", title: "Clean Adhesive", desc: "Wash walls to remove all remaining adhesive residue." },
-      { step: "04", title: "Skim & Sand", desc: "Skim-coat imperfections and sand smooth for painting." },
-    ],
     relatedSlugs: ["wallpaper-hanging", "interior-painting", "drywall-repair"],
     whyChooseUs: [
       { icon: "ShieldCheck", title: "Drywall Protected", desc: "We remove wallpaper without damaging the drywall underneath." },
@@ -169,12 +132,6 @@ export const services: ServiceInfo[] = [
     metaTitle: "Wood Staining in Merrimack Valley, MA | Mark MacLean Painting",
     metaDesc: "Professional wood staining in the Merrimack Valley. Sanding, cleaning, and even stain application for decks, cabinets, and trim. Licensed & Insured.",
     h1: "Wood Staining",
-    processSteps: [
-      { step: "01", title: "Clean & Strip", desc: "Power wash and strip old finish to expose raw wood." },
-      { step: "02", title: "Sand & Brighten", desc: "Sand surfaces smooth and apply wood brightener." },
-      { step: "03", title: "Apply Stain", desc: "Brush or spray stain evenly, working with the grain." },
-      { step: "04", title: "Seal & Protect", desc: "Apply protective topcoat for UV and moisture resistance." },
-    ],
     relatedSlugs: ["exterior-painting", "pressure-washing"],
     whyChooseUs: [
       { icon: "Paintbrush", title: "Thorough Surface Prep", desc: "Sanding and cleaning ensure even stain absorption with no blotchy spots." },
@@ -191,12 +148,6 @@ export const services: ServiceInfo[] = [
     metaTitle: "Pressure Washing in Merrimack Valley, MA | Mark MacLean Painting",
     metaDesc: "Professional pressure washing in the Merrimack Valley. Mold, debris, and dirt removed from siding, decks, driveways, and more. Licensed & Insured.",
     h1: "Pressure Washing",
-    processSteps: [
-      { step: "01", title: "Assess Surfaces", desc: "Identify surface types and select appropriate pressure levels." },
-      { step: "02", title: "Pre-Treat", desc: "Apply cleaning solution to break down mold, debris, and dirt." },
-      { step: "03", title: "Pressure Clean", desc: "High-pressure wash to remove all buildup from surfaces." },
-      { step: "04", title: "Final Rinse", desc: "Rinse thoroughly and inspect for any remaining spots." },
-    ],
     relatedSlugs: ["exterior-painting", "wood-staining"],
     whyChooseUs: [
       { icon: "SprayCan", title: "Pre-Treat with Cleaners", desc: "Surfaces are pre-washed with cleaning solutions before high-pressure treatment." },
