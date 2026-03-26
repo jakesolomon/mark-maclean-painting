@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Facebook } from "lucide-react";
 import { services, cities, BUSINESS_NAME, PHONE_NUMBER } from "@/data/siteData";
 
@@ -16,19 +17,25 @@ const Footer = () => (
     <div className="container-site py-16">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
-          <h3 className="text-display text-xl mb-4">{BUSINESS_NAME}</h3>
+          <Image
+            src="/logo.webp"
+            alt={BUSINESS_NAME}
+            width={140}
+            height={56}
+            className="h-10 w-auto brightness-0 invert mb-2"
+          />
           <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
             Professional painting services for the Merrimack Valley. Licensed, insured, and committed to quality craftsmanship.
           </p>
           <p className="text-primary-foreground/70 text-sm mb-6">{PHONE_NUMBER}</p>
           <div className="flex items-center gap-4">
-            <a href="#" aria-label="Instagram" className="text-primary-foreground/60 hover:text-accent transition-colors">
+            <a href="https://www.instagram.com/mmacleanpainting/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-primary-foreground/60 hover:text-accent transition-colors">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" aria-label="Facebook" className="text-primary-foreground/60 hover:text-accent transition-colors">
+            <a href="https://www.facebook.com/markmpainting/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-primary-foreground/60 hover:text-accent transition-colors">
               <Facebook className="w-5 h-5" />
             </a>
-            <a href="#" aria-label="Google" className="text-primary-foreground/60 hover:text-accent transition-colors">
+            <a href="https://share.google/modfL4UvBkiOAAWG7" target="_blank" rel="noopener noreferrer" aria-label="Google" className="text-primary-foreground/60 hover:text-accent transition-colors">
               <GoogleIcon className="w-5 h-5" />
             </a>
           </div>

@@ -27,6 +27,11 @@ const jsonLd = {
     name: `${c.name}, ${c.state}`,
   })),
   priceRange: "$$",
+  sameAs: [
+    "https://www.instagram.com/mmacleanpainting/",
+    "https://www.facebook.com/markmpainting/",
+    "https://share.google/modfL4UvBkiOAAWG7",
+  ],
 };
 
 const trustItems = [
@@ -37,19 +42,34 @@ const trustItems = [
 
 const testimonials = [
   {
-    name: "Sarah M.",
+    name: "Matt Desmond",
     rating: 5,
-    text: "Mark and his team painted the entire exterior of our Andover colonial. The prep work was thorough and the finished result looks incredible. We couldn't be happier with the quality.",
+    text: "I bought a new home that needed some updates to become my dream home. These guys painted the entire (100 year old) interior and now it looks like a completely new, BEAUTIFUL place. They're fast, well priced, great to work with, and amazing at getting the fine details right like trims. I'll never use another painting company ever again.",
   },
   {
-    name: "David R.",
+    name: "John Bushnell",
     rating: 5,
-    text: "Had our kitchen cabinets painted instead of replacing them. The finish is smooth and flawless \u2014 everyone thinks they're brand new. Highly recommend Mark MacLean Painting.",
+    text: "I would most definitely hire this man again. Not only did he do an outstanding job (I had inside and outside painting done) he's right on target with his pricing, which is very fair and probably one of the nicest and most personable I’ve ever had do work on and in my house. If you’re looking for excellent and fair pricing and a well done job, this is the person to hire.",
   },
   {
-    name: "Jennifer L.",
+    name: "Ryan F",
     rating: 5,
-    text: "Professional from start to finish. They covered everything, fixed some drywall issues we didn't even ask about, and left our home cleaner than they found it. Will use again for sure.",
+    text: "I hired Mark to paint my kitchen cabinets, him and his crew were professional, reliable and got the job done in a timely manner. I would recommend them!",
+  },
+  {
+    name: "Anita D",
+    rating: 5,
+    text: "Hire him you won't be disappointed, he went above and beyond to match colors, did what he said he would do and finished on time. When he cleaned up you'd never know he was there. Very polite and wants customer to be happy with his work.",
+  },
+  {
+    name: "Candace Gartside",
+    rating: 5,
+    text: "I have hired Mark on numerous occasions. Not only is he meticulous in his work, but he leaves no mess and is very reasonably priced. I HIGHLY recommend his services!",
+  },
+  {
+    name: "Jodi Tiberio",
+    rating: 5,
+    text: "I needed the inside of my house painted. Mark's company came highly recommended and I can't say enough about them. I received a call back quickly. They were very professional and detailed about everything. Definitely would call them for future jobs inside and outside!",
   },
 ];
 
