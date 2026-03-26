@@ -99,7 +99,7 @@ export default function HomePage() {
               className="text-muted-foreground max-w-2xl mb-8"
               style={{ fontSize: "var(--step-0)" }}
             >
-              Andover to Lowell. Interior, Exterior, and Cabinetry Refinishing.
+              30+ years of trusted interior and exterior painting for homes and businesses.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -137,8 +137,7 @@ export default function HomePage() {
               Our Services
             </h2>
             <p className="text-muted-foreground mb-12 max-w-xl">
-              We don&apos;t just paint houses. We protect your largest
-              investment.
+              Quality painting and surface prep services that extend the life and look of your property.
             </p>
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -172,7 +171,7 @@ export default function HomePage() {
               What Our Clients Say
             </h2>
             <p className="text-muted-foreground mb-12 max-w-xl">
-              Hear from homeowners across the Merrimack Valley.
+              5-star rated by homeowners and businesses across the Merrimack Valley.
             </p>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -220,8 +219,7 @@ export default function HomePage() {
               Areas We Serve
             </h2>
             <p className="text-muted-foreground mb-12 max-w-xl">
-              Proudly serving homeowners across the Merrimack Valley region of
-              Massachusetts.
+              Proudly serving homes and businesses across the Merrimack Valley.
             </p>
           </FadeIn>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">

@@ -27,7 +27,7 @@ export default function ServicesHub() {
               className="text-muted-foreground max-w-2xl"
               style={{ fontSize: "var(--step-0)" }}
             >
-              Complete painting and finishing services for your home.
+              Complete painting and finishing services for your property.
             </p>
           </FadeIn>
         </div>

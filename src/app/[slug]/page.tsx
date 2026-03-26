@@ -71,30 +71,70 @@ function ServiceContent({ service }: { service: ServiceInfo }) {
   return (
     <>
       <section className="section-gradient py-20">
-        <div className="container-site">
-          <FadeIn>
-            <Link
-              href="/services"
-              className="text-accent text-sm font-medium mb-4 inline-block hover:underline"
-            >
-              &larr; All Services
-            </Link>
-            <h1
-              className="text-display text-foreground mb-4"
-              style={{ fontSize: "var(--step-5)" }}
-            >
-              {service.h1}
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <p
-              className="text-muted-foreground max-w-3xl leading-relaxed"
-              style={{ fontSize: "var(--step-0)" }}
-            >
-              {service.description}
-            </p>
-          </FadeIn>
-        </div>
+        {serviceImages.length > 0 ? (
+          <div className="container-site grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <FadeIn>
+                <Link
+                  href="/services"
+                  className="text-accent text-sm font-medium mb-4 inline-block hover:underline"
+                >
+                  &larr; All Services
+                </Link>
+                <h1
+                  className="text-display text-foreground mb-4"
+                  style={{ fontSize: "var(--step-3)" }}
+                >
+                  {service.h1}
+                </h1>
+              </FadeIn>
+              <FadeIn delay={0.1}>
+                <p
+                  className="text-muted-foreground leading-relaxed"
+                  style={{ fontSize: "var(--step--1)" }}
+                >
+                  {service.description}
+                </p>
+              </FadeIn>
+            </div>
+            <FadeIn delay={0.2}>
+              <Image
+                src={serviceImages[0].src}
+                alt={serviceImages[0].alt}
+                width={600}
+                height={750}
+                className="w-full aspect-[4/5] max-h-[60vh] rounded-lg object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </FadeIn>
+          </div>
+        ) : (
+          <div className="container-site">
+            <FadeIn>
+              <Link
+                href="/services"
+                className="text-accent text-sm font-medium mb-4 inline-block hover:underline"
+              >
+                &larr; All Services
+              </Link>
+              <h1
+                className="text-display text-foreground mb-4"
+                style={{ fontSize: "var(--step-5)" }}
+              >
+                {service.h1}
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <p
+                className="text-muted-foreground max-w-3xl leading-relaxed"
+                style={{ fontSize: "var(--step-0)" }}
+              >
+                {service.description}
+              </p>
+            </FadeIn>
+          </div>
+        )}
       </section>
 
       {/* Why Choose Us */}

@@ -44,6 +44,15 @@ export const galleryImages: GalleryImage[] = [
     state: "NH",
   },
 
+  // Interior Painting — hero image
+  {
+    src: "/gallery/interior-painting/Lynnfield-MA-9.jpeg",
+    alt: "Formal room with dark navy walls and white wainscoting in Lynnfield, MA",
+    service: "interior-painting",
+    town: "Lynnfield",
+    state: "MA",
+  },
+
   // Interior Painting — Billerica
   {
     src: "/gallery/interior-painting/Billerica-MA-1.jpeg",
@@ -145,13 +154,6 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/gallery/interior-painting/Lynnfield-MA-8.jpeg",
     alt: "Dining room with cream walls, white wainscoting, and built-in glass-door cabinets in Lynnfield, MA",
-    service: "interior-painting",
-    town: "Lynnfield",
-    state: "MA",
-  },
-  {
-    src: "/gallery/interior-painting/Lynnfield-MA-9.jpeg",
-    alt: "Formal room with dark navy walls and white wainscoting in Lynnfield, MA",
     service: "interior-painting",
     town: "Lynnfield",
     state: "MA",
