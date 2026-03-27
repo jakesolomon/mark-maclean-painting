@@ -44,9 +44,9 @@ export async function POST(request: Request) {
       Destination: {
         ToAddresses: [process.env.SES_TO_EMAIL!],
       },
-      ReplyToAddresses: email ? [email] : undefined,
+      ReplyToAddresses: email && isValidEmail(email) ? [email] : undefined,
       Message: {
-        Subject: { Data: `New Quote Request: ${service} — ${name}` },
+        Subject: { Data: `New Quote Request: ${sanitize(service)} — ${sanitize(name)}` },
         Body: {
           Html: { Data: htmlBody },
           Text: {
@@ -74,4 +74,12 @@ function escapeHtml(str: string): string {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function sanitize(str: string): string {
+  return str.replace(/[\r\n]/g, " ").trim();
+}
+
+function isValidEmail(str: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);
 }
