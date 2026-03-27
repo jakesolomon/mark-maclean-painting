@@ -24,21 +24,21 @@ const Footer = () => (
             height={88}
             className="h-20 w-auto brightness-0 invert mb-2"
           />
-          <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
+          <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
             Professional painting services for the Merrimack Valley. Fully insured and committed to quality craftsmanship.
           </p>
-          <p className="text-primary-foreground/70 text-sm">{PHONE_NUMBER}</p>
-          <p className="text-primary-foreground/70 text-sm mb-6">
+          <p className="text-primary-foreground/80 text-sm">{PHONE_NUMBER}</p>
+          <p className="text-primary-foreground/80 text-sm mb-6">
             <a href={`mailto:${EMAIL_ADDRESS}`} className="hover:text-accent transition-colors">{EMAIL_ADDRESS}</a>
           </p>
           <div className="flex items-center gap-4">
-            <a href="https://www.instagram.com/mmacleanpainting/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-primary-foreground/60 hover:text-accent transition-colors">
+            <a href="https://www.instagram.com/mmacleanpainting/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-primary-foreground/80 hover:text-accent transition-colors">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="https://www.facebook.com/markmpainting/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-primary-foreground/60 hover:text-accent transition-colors">
+            <a href="https://www.facebook.com/markmpainting/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-primary-foreground/80 hover:text-accent transition-colors">
               <Facebook className="w-5 h-5" />
             </a>
-            <a href="https://share.google/modfL4UvBkiOAAWG7" target="_blank" rel="noopener noreferrer" aria-label="Google" className="text-primary-foreground/60 hover:text-accent transition-colors">
+            <a href="https://share.google/modfL4UvBkiOAAWG7" target="_blank" rel="noopener noreferrer" aria-label="Google" className="text-primary-foreground/80 hover:text-accent transition-colors">
               <GoogleIcon className="w-5 h-5" />
             </a>
           </div>
@@ -48,7 +48,7 @@ const Footer = () => (
           <ul className="space-y-2">
             {services.map(s => (
               <li key={s.slug}>
-                <Link href={`/${s.slug}`} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link href={`/${s.slug}`} className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
                   {s.name}
                 </Link>
               </li>
@@ -60,7 +60,7 @@ const Footer = () => (
           <ul className="space-y-2">
             {cities.map(c => (
               <li key={c.slug}>
-                <Link href={`/${c.slug}`} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
+                <Link href={`/${c.slug}`} className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
                   {c.name}, {c.state}
                 </Link>
               </li>
@@ -70,14 +70,14 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2">
-            <li><Link href="/services" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">All Services</Link></li>
-            <li><Link href="/areas" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Areas Served</Link></li>
-            <li><Link href="/gallery" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Gallery</Link></li>
-            <li><Link href="/contact" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Contact</Link></li>
+            <li><Link href="/services" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">All Services</Link></li>
+            <li><Link href="/areas" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">Areas Served</Link></li>
+            <li><Link href="/gallery" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">Gallery</Link></li>
+            <li><Link href="/contact" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">Contact</Link></li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-sm text-primary-foreground/50">
+      <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-sm text-primary-foreground/70">
         © {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.
       </div>
     </div>

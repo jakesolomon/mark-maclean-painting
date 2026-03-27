@@ -70,9 +70,10 @@
   }
 
   .btn-cta {
-    @apply px-8 py-4 bg-accent text-accent-foreground font-medium rounded-sm tracking-wide transition-colors;
+    @apply px-8 py-4 text-white font-medium rounded-sm tracking-wide transition-colors;
+    background-color: hsl(35, 92%, 45%);
     &:hover {
-      background-color: hsl(35, 92%, 44%);
+      background-color: hsl(35, 92%, 38%);
     }
     &:active {
       transform: scale(0.98);
