@@ -2,21 +2,24 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react";
 
 const LeadCaptureForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [serverError, setServerError] = useState("");
 
   const validate = (form: FormData) => {
     const errs: Record<string, string> = {};
     if (!form.get("name")) errs.name = "Name is required";
     if (!form.get("phone")) errs.phone = "Phone number is required";
     if (!form.get("service")) errs.service = "Please select a service";
+    if (!form.get("message")) errs.message = "Please describe your project";
     return errs;
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const errs = validate(form);
@@ -25,7 +28,34 @@ const LeadCaptureForm = () => {
       return;
     }
     setErrors({});
-    setSubmitted(true);
+    setServerError("");
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.get("name"),
+          phone: form.get("phone"),
+          email: form.get("email"),
+          service: form.get("service"),
+          message: form.get("message"),
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        setServerError(data.error || "Something went wrong. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setServerError("Something went wrong. Please try again or call us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -46,6 +76,9 @@ const LeadCaptureForm = () => {
     <div id="quote" className="card-elevated rounded-2xl p-8 md:p-10">
       <h3 className="text-display text-2xl mb-2">Get Your Free Estimate</h3>
       <p className="text-muted-foreground mb-8">No obligation. We'll respond within one business day.</p>
+      {serverError && (
+        <p className="text-destructive text-sm mb-4 p-3 bg-destructive/10 rounded-md">{serverError}</p>
+      )}
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <input name="name" placeholder="Full Name" className="input-underline" />
@@ -73,10 +106,18 @@ const LeadCaptureForm = () => {
           {errors.service && <p className="text-destructive text-sm mt-1">{errors.service}</p>}
         </div>
         <div>
-          <textarea name="message" placeholder="Tell us about your project (optional)" rows={3} className="input-underline resize-none" />
+          <textarea name="message" placeholder="Tell us about your project" rows={3} className="input-underline resize-none" />
+          {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
         </div>
-        <button type="submit" className="btn-cta w-full text-center">
-          Request Free Estimate
+        <button type="submit" disabled={loading} className="btn-cta w-full text-center disabled:opacity-60">
+          {loading ? (
+            <span className="flex items-center justify-center gap-2">
+              <Loader2 className="w-4 h-4 animate-spin" />
+              Sending...
+            </span>
+          ) : (
+            "Request Free Estimate"
+          )}
         </button>
       </form>
     </div>
