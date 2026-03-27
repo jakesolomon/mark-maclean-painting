@@ -1,5 +1,4 @@
 export const PHONE_NUMBER = "(978) 912-4271";
-export const LICENSE_NUMBER = "HIC #198765";
 export const BUSINESS_NAME = "Mark MacLean Painting";
 
 export interface WhyChooseItem {
@@ -24,7 +23,6 @@ export interface CityInfo {
   slug: string;
   name: string;
   state: string;
-  contextualCopy: string;
 }
 
 export const services: ServiceInfo[] = [
@@ -34,7 +32,7 @@ export const services: ServiceInfo[] = [
     shortDesc: "Weather-resistant coatings that protect and beautify your home's exterior for years.",
     description: "Our exterior painting process ensures lasting results: thorough surface prep including edge sealing and old paint removal, inspection for siding damage, professional priming, and two or more coats of premium exterior paint. The result is a finish that resists fading, peeling, and moisture damage through New England's toughest weather. Available for complete exteriors or specific features like trim and windows.",
     metaTitle: "Exterior Painting in Merrimack Valley, MA | Mark MacLean Painting",
-    metaDesc: "Professional exterior painting in the Merrimack Valley. Thorough prep, two-coat minimum, and moisture-resistant finishes. Licensed & Insured. Free estimates.",
+    metaDesc: "Professional exterior painting in the Merrimack Valley. Thorough prep, two-coat minimum, and moisture-resistant finishes. Fully Insured. Free estimates.",
     h1: "Exterior Painting",
     relatedSlugs: ["interior-painting", "pressure-washing", "wood-staining"],
     whyChooseUs: [
@@ -50,7 +48,7 @@ export const services: ServiceInfo[] = [
     shortDesc: "Transform your living spaces with flawless walls, crisp lines, and zero mess.",
     description: "We cover floors and furniture before starting. We address caulking and drywall issues before applying multiple coats of high-quality interior paint. Full rooms or smaller jobs on walls, ceilings, trim, and doors.",
     metaTitle: "Interior Painting in Merrimack Valley, MA | Mark MacLean Painting",
-    metaDesc: "Expert interior painting in the Merrimack Valley. Full protection, drywall prep, and multiple coats of quality paint. Licensed & Insured. Free estimates.",
+    metaDesc: "Expert interior painting in the Merrimack Valley. Full protection, drywall prep, and multiple coats of quality paint. Fully Insured. Free estimates.",
     h1: "Interior Painting",
     relatedSlugs: ["exterior-painting", "cabinet-painting", "drywall-repair"],
     whyChooseUs: [
@@ -66,7 +64,7 @@ export const services: ServiceInfo[] = [
     shortDesc: "Refinish your kitchen cabinets for a fraction of the cost of replacement.",
     description: "Give your cabinets a fresh, modern look without the cost and disruption of replacement. We carefully prep your kitchen cabinets, bathroom vanities, or built-ins by protecting surrounding areas and removing all hardware. Multiple coats of premium paint deliver a factory-fresh finish with clean edges and lasting durability.",
     metaTitle: "Cabinet Painting in Merrimack Valley, MA | Mark MacLean Painting",
-    metaDesc: "Professional cabinet painting in the Merrimack Valley. Hardware removed, clean edges, and durable multi-coat finishes. Licensed & Insured.",
+    metaDesc: "Professional cabinet painting in the Merrimack Valley. Hardware removed, clean edges, and durable multi-coat finishes. Fully Insured.",
     h1: "Cabinet Painting",
     relatedSlugs: ["interior-painting", "wood-staining"],
     whyChooseUs: [
@@ -82,7 +80,7 @@ export const services: ServiceInfo[] = [
     shortDesc: "Seamless patches for holes, cracks, and water damage — invisible once painted.",
     description: "We repair cracks, holes, moisture, and mold damage with texture-matching for a seamless, paint-ready finish. Available as a standalone service or paired with interior painting.",
     metaTitle: "Drywall Repair in Merrimack Valley, MA | Mark MacLean Painting",
-    metaDesc: "Expert drywall repair in the Merrimack Valley. Cracks, holes, and moisture damage fixed with seamless texture matching. Licensed & Insured.",
+    metaDesc: "Expert drywall repair in the Merrimack Valley. Cracks, holes, and moisture damage fixed with seamless texture matching. Fully Insured.",
     h1: "Drywall Repair",
     relatedSlugs: ["interior-painting", "wallpaper-removal"],
     whyChooseUs: [
@@ -98,7 +96,7 @@ export const services: ServiceInfo[] = [
     shortDesc: "Precision wallpaper installation with perfectly matched patterns and seams.",
     description: "Expert wallpaper hanging for accent walls or full rooms. We handle surface preparation, precise pattern alignment, and clean edge work at ceilings and baseboards. Our attention to detail ensures a professional finish that transforms your space.",
     metaTitle: "Wallpaper Hanging in Merrimack Valley, MA | Mark MacLean Painting",
-    metaDesc: "Professional wallpaper hanging in the Merrimack Valley. Precise pattern matching, clean lines, and expert surface prep. Licensed & Insured.",
+    metaDesc: "Professional wallpaper hanging in the Merrimack Valley. Precise pattern matching, clean lines, and expert surface prep. Fully Insured.",
     h1: "Wallpaper Hanging",
     relatedSlugs: ["wallpaper-removal", "interior-painting"],
     whyChooseUs: [
@@ -114,7 +112,7 @@ export const services: ServiceInfo[] = [
     shortDesc: "Clean, damage-free wallpaper stripping that leaves walls ready for a fresh finish.",
     description: "We safely remove wallpaper and all adhesive residue without damaging drywall, and repair any pre-existing damage behind it. Leaves smooth, paint-ready walls.",
     metaTitle: "Wallpaper Removal in Merrimack Valley, MA | Mark MacLean Painting",
-    metaDesc: "Professional wallpaper removal in the Merrimack Valley. Damage-free stripping, adhesive cleanup, and smooth wall prep. Licensed & Insured.",
+    metaDesc: "Professional wallpaper removal in the Merrimack Valley. Damage-free stripping, adhesive cleanup, and smooth wall prep. Fully Insured.",
     h1: "Wallpaper Removal",
     relatedSlugs: ["wallpaper-hanging", "interior-painting", "drywall-repair"],
     whyChooseUs: [
@@ -130,7 +128,7 @@ export const services: ServiceInfo[] = [
     shortDesc: "Enhance the natural beauty of decks, fences, and trim with premium stains.",
     description: "Expert wood staining brings out the natural beauty of wood while protecting it from wear. We carefully sand and clean surfaces for optimal stain absorption, then apply finishes that deliver rich, even color. Interior or exterior: furniture, cabinetry, decks, stairs, railings, and trim.",
     metaTitle: "Wood Staining in Merrimack Valley, MA | Mark MacLean Painting",
-    metaDesc: "Professional wood staining in the Merrimack Valley. Sanding, cleaning, and even stain application for decks, cabinets, and trim. Licensed & Insured.",
+    metaDesc: "Professional wood staining in the Merrimack Valley. Sanding, cleaning, and even stain application for decks, cabinets, and trim. Fully Insured.",
     h1: "Wood Staining",
     relatedSlugs: ["exterior-painting", "pressure-washing"],
     whyChooseUs: [
@@ -146,7 +144,7 @@ export const services: ServiceInfo[] = [
     shortDesc: "Restore driveways, siding, and patios to like-new condition with controlled pressure.",
     description: "Professional pressure washing restores curb appeal and removes years of buildup from siding, decks, driveways, sidewalks, fences, and patios. We use a two-step process: targeted cleaners to break down stubborn grime, followed by high-pressure washing to eliminate mold, dirt, and debris.",
     metaTitle: "Pressure Washing in Merrimack Valley, MA | Mark MacLean Painting",
-    metaDesc: "Professional pressure washing in the Merrimack Valley. Mold, debris, and dirt removed from siding, decks, driveways, and more. Licensed & Insured.",
+    metaDesc: "Professional pressure washing in the Merrimack Valley. Mold, debris, and dirt removed from siding, decks, driveways, and more. Fully Insured.",
     h1: "Pressure Washing",
     relatedSlugs: ["exterior-painting", "wood-staining"],
     whyChooseUs: [
@@ -159,18 +157,18 @@ export const services: ServiceInfo[] = [
 ];
 
 export const cities: CityInfo[] = [
-  { slug: "andover", name: "Andover", state: "MA", contextualCopy: "Serving the historic homes of Andover with lead-safe certified painting practices. From Phillips Academy to Shawsheen Village, we understand the care these properties demand." },
-  { slug: "north-andover", name: "North Andover", state: "MA", contextualCopy: "Professional painting for North Andover's diverse housing stock — from downtown colonials to newer developments along Route 114." },
-  { slug: "haverhill", name: "Haverhill", state: "MA", contextualCopy: "From the Victorian homes of Bradford to the riverfront condos downtown, Haverhill properties get the precise, durable finishes they deserve." },
-  { slug: "billerica", name: "Billerica", state: "MA", contextualCopy: "Reliable painting services for Billerica homeowners. We protect your investment with quality materials and meticulous preparation." },
-  { slug: "lowell", name: "Lowell", state: "MA", contextualCopy: "Expert painting for Lowell's mill conversions, triple-deckers, and single-family homes. Lead-safe certified for older properties." },
-  { slug: "methuen", name: "Methuen", state: "MA", contextualCopy: "Methuen homeowners trust us for interior and exterior painting that withstands the Merrimack Valley's seasons." },
-  { slug: "tewksbury", name: "Tewksbury", state: "MA", contextualCopy: "Quality painting services for Tewksbury homes. From new construction touch-ups to full exterior repaints." },
-  { slug: "dracut", name: "Dracut", state: "MA", contextualCopy: "Serving Dracut with professional painting that combines New England craftsmanship with modern techniques." },
-  { slug: "chelmsford", name: "Chelmsford", state: "MA", contextualCopy: "Chelmsford's trusted painters. We deliver clean, lasting results for your home's interior and exterior." },
-  { slug: "lawrence", name: "Lawrence", state: "MA", contextualCopy: "Professional painting services for Lawrence homes and multi-family properties. Licensed, insured, and lead-safe certified." },
-  { slug: "burlington", name: "Burlington", state: "MA", contextualCopy: "Burlington homeowners rely on us for premium painting services — from colonial restorations to modern refreshes." },
-  { slug: "wilmington", name: "Wilmington", state: "MA", contextualCopy: "Wilmington's go-to painters for residential interior and exterior projects. Quality prep, quality paint, quality results." },
+  { slug: "andover", name: "Andover", state: "MA" },
+  { slug: "north-andover", name: "North Andover", state: "MA" },
+  { slug: "haverhill", name: "Haverhill", state: "MA" },
+  { slug: "billerica", name: "Billerica", state: "MA" },
+  { slug: "lowell", name: "Lowell", state: "MA" },
+  { slug: "methuen", name: "Methuen", state: "MA" },
+  { slug: "tewksbury", name: "Tewksbury", state: "MA" },
+  { slug: "dracut", name: "Dracut", state: "MA" },
+  { slug: "chelmsford", name: "Chelmsford", state: "MA" },
+  { slug: "lawrence", name: "Lawrence", state: "MA" },
+  { slug: "burlington", name: "Burlington", state: "MA" },
+  { slug: "wilmington", name: "Wilmington", state: "MA" },
 ];
 
 

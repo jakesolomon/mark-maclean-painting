@@ -17,13 +17,26 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://markmacleanpainting.com"),
   title: {
     default: "Professional Painter in Merrimack Valley, MA | Mark MacLean Painting",
     template: "%s | Mark MacLean Painting",
   },
   description:
     "Professional painting services in the Merrimack Valley. Interior, exterior, cabinet painting & more. Serving Andover, Haverhill, Lowell, Methuen & surrounding towns.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Mark MacLean Painting",
+    images: [
+      {
+        url: "/gallery/exterior-painting/North-Andover-MA-1.png",
+        width: 1200,
+        height: 630,
+        alt: "Mark MacLean Painting — Professional painters in the Merrimack Valley",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

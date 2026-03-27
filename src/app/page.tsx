@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, FileText, ArrowRight, Star } from "lucide-react";
+import { Shield, FileText, ArrowRight, Users, Star } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { services, cities, BUSINESS_NAME, PHONE_NUMBER } from "@/data/siteData";
@@ -15,8 +15,10 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: BUSINESS_NAME,
+  url: "https://markmacleanpainting.com",
   telephone: PHONE_NUMBER,
   description: "Professional painting services in the Merrimack Valley, MA.",
+  image: "https://markmacleanpainting.com/gallery/exterior-painting/North-Andover-MA-1.png",
   address: {
     "@type": "PostalAddress",
     addressRegion: "MA",
@@ -26,6 +28,12 @@ const jsonLd = {
     "@type": "City",
     name: `${c.name}, ${c.state}`,
   })),
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "15",
+    bestRating: "5",
+  },
   priceRange: "$$",
   sameAs: [
     "https://www.instagram.com/mmacleanpainting/",
@@ -37,6 +45,7 @@ const jsonLd = {
 const trustItems = [
   { icon: Shield, label: "Fully Insured" },
   { icon: FileText, label: "Fast, Free Estimates" },
+  { icon: Users, label: "Family-Owned" },
   { icon: Star, label: "5-Star Rated" },
 ];
 

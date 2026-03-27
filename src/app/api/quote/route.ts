@@ -21,6 +21,13 @@ export async function POST(request: Request) {
       );
     }
 
+    if (name.length > 100 || phone.length > 20 || (email && email.length > 254) || service.length > 100 || message.length > 1000) {
+      return NextResponse.json(
+        { error: "One or more fields exceed the maximum length." },
+        { status: 400 }
+      );
+    }
+
     const htmlBody = `
       <h2>New Quote Request</h2>
       <table style="border-collapse:collapse;width:100%;max-width:500px;">

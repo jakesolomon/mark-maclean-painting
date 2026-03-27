@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Shield, Award } from "lucide-react";
-import { PHONE_NUMBER, LICENSE_NUMBER, BUSINESS_NAME } from "@/data/siteData";
+import { Phone, Shield, Star } from "lucide-react";
+import { PHONE_NUMBER, BUSINESS_NAME } from "@/data/siteData";
 
 const UtilityBar = () => (
   <div className="sticky top-0 z-50">
@@ -10,11 +10,11 @@ const UtilityBar = () => (
       <div className="container-site flex items-center justify-center gap-8 py-1.5">
         <span className="flex items-center gap-1.5">
           <Shield className="w-3.5 h-3.5" />
-          Licensed &amp; Insured
+          Fully Insured
         </span>
         <span className="flex items-center gap-1.5">
-          <Award className="w-3.5 h-3.5" />
-          {LICENSE_NUMBER}
+          <Star className="w-3.5 h-3.5" />
+          5-Star Rated
         </span>
       </div>
     </div>

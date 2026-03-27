@@ -27,7 +27,7 @@ export default function AreasHub() {
               className="text-muted-foreground max-w-2xl"
               style={{ fontSize: "var(--step-0)" }}
             >
-              Proudly serving homeowners across the Merrimack Valley.
+              Proudly serving homes and businesses across the Merrimack Valley.
             </p>
           </FadeIn>
         </div>
@@ -44,9 +44,6 @@ export default function AreasHub() {
                 <h2 className="text-display text-xl mb-2 group-hover:text-accent transition-colors">
                   {c.name}, {c.state}
                 </h2>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  {c.contextualCopy}
-                </p>
                 <span className="text-accent text-sm font-medium flex items-center gap-1">
                   View services <ArrowRight className="w-4 h-4" />
                 </span>

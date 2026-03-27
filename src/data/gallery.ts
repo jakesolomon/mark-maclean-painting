@@ -53,22 +53,6 @@ export const galleryImages: GalleryImage[] = [
     state: "MA",
   },
 
-  // Interior Painting — Billerica
-  {
-    src: "/gallery/interior-painting/Billerica-MA-1.jpeg",
-    alt: "Commercial interior painting with high ceilings and scaffolding in Billerica, MA",
-    service: "interior-painting",
-    town: "Billerica",
-    state: "MA",
-  },
-  {
-    src: "/gallery/interior-painting/Billerica-MA-2.jpeg",
-    alt: "Room painted blue-gray with white trim and ceiling in Billerica, MA",
-    service: "interior-painting",
-    town: "Billerica",
-    state: "MA",
-  },
-
   // Interior Painting — Boston
   {
     src: "/gallery/interior-painting/Boston-MA-1.jpeg",
@@ -175,13 +159,6 @@ export const galleryImages: GalleryImage[] = [
 
   // Interior Painting — Methuen
   {
-    src: "/gallery/interior-painting/Methuen-MA-1.jpg",
-    alt: "Living room with freshly painted light yellow walls in Methuen, MA",
-    service: "interior-painting",
-    town: "Methuen",
-    state: "MA",
-  },
-  {
     src: "/gallery/interior-painting/Methuen-MA-2.jpg",
     alt: "Painted living room with cream walls and arched doorway in Methuen, MA",
     service: "interior-painting",
@@ -193,13 +170,6 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/gallery/interior-painting/Salem-NH-1.jpeg",
     alt: "Conference room with dark gray accent wall and modern lighting in Salem, NH",
-    service: "interior-painting",
-    town: "Salem",
-    state: "NH",
-  },
-  {
-    src: "/gallery/interior-painting/Salem-NH-2.jpg",
-    alt: "Vaulted ceiling living room being painted with ladder and supplies in Salem, NH",
     service: "interior-painting",
     town: "Salem",
     state: "NH",
@@ -226,13 +196,6 @@ export const galleryImages: GalleryImage[] = [
     state: "NH",
   },
   {
-    src: "/gallery/interior-painting/Salem-NH-6.jpeg",
-    alt: "Office space with gray and mustard yellow accent walls in Salem, NH",
-    service: "interior-painting",
-    town: "Salem",
-    state: "NH",
-  },
-  {
     src: "/gallery/interior-painting/Salem-NH-7.jpeg",
     alt: "Office with curved mustard yellow accent wall and large windows in Salem, NH",
     service: "interior-painting",
@@ -244,13 +207,6 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/gallery/interior-painting/Seabrook-NH-1.jpeg",
     alt: "Open-concept living room with off-white walls, hardwood floors, and staircase in Seabrook, NH",
-    service: "interior-painting",
-    town: "Seabrook",
-    state: "NH",
-  },
-  {
-    src: "/gallery/interior-painting/Seabrook-NH-2.jpeg",
-    alt: "Open living room and kitchen with cream walls and hardwood floors in Seabrook, NH",
     service: "interior-painting",
     town: "Seabrook",
     state: "NH",
@@ -306,20 +262,13 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     src: "/gallery/interior-painting/Seabrook-NH-10.jpeg",
-    alt: "Commercial hallway with dark navy walls and decorative wood paneling in Seabrook, NH",
-    service: "interior-painting",
-    town: "Seabrook",
-    state: "NH",
-  },
-  {
-    src: "/gallery/interior-painting/Seabrook-NH-11.jpeg",
     alt: "Upscale restaurant with navy blue panels and gold accents in Seabrook, NH",
     service: "interior-painting",
     town: "Seabrook",
     state: "NH",
   },
   {
-    src: "/gallery/interior-painting/Seabrook-NH-12.jpeg",
+    src: "/gallery/interior-painting/Seabrook-NH-11.jpeg",
     alt: "Restaurant dining room with navy walls and gold medallion decorations in Seabrook, NH",
     service: "interior-painting",
     town: "Seabrook",
@@ -344,6 +293,13 @@ export const galleryImages: GalleryImage[] = [
 
   // Wallpaper Hanging
   {
+    src: "/gallery/wallpaper-hanging/Seabrook-NH-2.jpeg",
+    alt: "Wood-look wall covering at a commercial reception counter in Seabrook, NH",
+    service: "wallpaper-hanging",
+    town: "Seabrook",
+    state: "NH",
+  },
+  {
     src: "/gallery/wallpaper-hanging/Seabrook-NH-1.jpeg",
     alt: "Wood-paneled accent wall with dark wainscoting in a commercial banquet hall in Seabrook, NH",
     service: "wallpaper-hanging",
@@ -351,8 +307,8 @@ export const galleryImages: GalleryImage[] = [
     state: "NH",
   },
   {
-    src: "/gallery/wallpaper-hanging/Seabrook-NH-2.jpeg",
-    alt: "Wood-look wall covering at a commercial reception counter in Seabrook, NH",
+    src: "/gallery/wallpaper-hanging/Seabrook-NH-4.jpeg",
+    alt: "Commercial hallway with dark navy walls and decorative wood paneling in Seabrook, NH",
     service: "wallpaper-hanging",
     town: "Seabrook",
     state: "NH",

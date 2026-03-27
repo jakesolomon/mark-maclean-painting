@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://example.com/sitemap.xml",
+    sitemap: "https://markmacleanpainting.com/sitemap.xml",
   };
 }

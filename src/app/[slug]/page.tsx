@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Shield, Award, icons } from "lucide-react";
+import { ArrowRight, Shield, FileText, Users, Star, icons } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import {
@@ -10,10 +10,19 @@ import {
   cities,
   getServiceBySlug,
   getCityBySlug,
+  BUSINESS_NAME,
+  PHONE_NUMBER,
   type ServiceInfo,
   type CityInfo,
 } from "@/data/siteData";
 import { getImagesByService } from "@/data/gallery";
+
+const trustItems = [
+  { icon: Shield, label: "Fully Insured" },
+  { icon: FileText, label: "Fast, Free Estimates" },
+  { icon: Users, label: "Family-Owned" },
+  { icon: Star, label: "5-Star Rated" },
+];
 
 const DynamicIcon = ({
   name,
@@ -54,7 +63,7 @@ export function generateMetadata({
   if (city) {
     return {
       title: `Professional Painters in ${city.name}, ${city.state}`,
-      description: `Professional painting services in ${city.name}, ${city.state}. Interior, exterior, cabinet painting & more. Licensed & Insured. Free estimates.`,
+      description: `Professional painting services in ${city.name}, ${city.state}. Interior, exterior, cabinet painting & more. Fully Insured. Free estimates.`,
       alternates: { canonical: `/${city.slug}` },
     };
   }
@@ -68,8 +77,33 @@ function ServiceContent({ service }: { service: ServiceInfo }) {
     .filter(Boolean);
   const serviceImages = getImagesByService(service.slug);
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.name,
+    description: service.description,
+    url: `https://markmacleanpainting.com/${service.slug}`,
+    provider: {
+      "@type": "LocalBusiness",
+      name: BUSINESS_NAME,
+      telephone: PHONE_NUMBER,
+      url: "https://markmacleanpainting.com",
+    },
+    areaServed: cities.map((c) => ({
+      "@type": "City",
+      name: `${c.name}, ${c.state}`,
+    })),
+    ...(serviceImages.length > 0 && {
+      image: `https://markmacleanpainting.com${serviceImages[0].src}`,
+    }),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <section className="section-gradient py-20">
         {serviceImages.length > 0 ? (
           <div className="container-site grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -177,7 +211,7 @@ function ServiceContent({ service }: { service: ServiceInfo }) {
                 Examples of our {service.name.toLowerCase()} projects.
               </p>
             </FadeIn>
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+            <div className={serviceImages.length <= 4 ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" : "columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4"}>
               {serviceImages.map((img, i) => (
                 <FadeIn key={i} delay={i * 0.06}>
                   <div className="break-inside-avoid rounded-lg overflow-hidden">
@@ -266,26 +300,36 @@ function CityContent({ city }: { city: CityInfo }) {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p
-              className="text-muted-foreground max-w-3xl leading-relaxed"
+              className="text-muted-foreground max-w-2xl mb-8"
               style={{ fontSize: "var(--step-0)" }}
             >
-              {city.contextualCopy}
+              30+ years of trusted interior and exterior painting for homes and businesses.
             </p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <div className="flex flex-wrap gap-4">
+              <a href="#quote" className="btn-cta">
+                Get Your Free Estimate
+              </a>
+              <Link href="/services" className="btn-primary">
+                View Our Services
+              </Link>
+            </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Trust Signals */}
+      {/* Trust Bar */}
       <section className="border-b border-border">
         <div className="container-site py-6 flex flex-wrap justify-center gap-8 md:gap-16">
-          <div className="flex items-center gap-2 text-sm font-medium">
-            <Shield className="w-5 h-5 text-accent" />
-            Licensed &amp; Insured
-          </div>
-          <div className="flex items-center gap-2 text-sm font-medium">
-            <Award className="w-5 h-5 text-accent" />
-            Lead-Safe Certified
-          </div>
+          {trustItems.map(({ icon: Icon, label }) => (
+            <FadeIn key={label}>
+              <div className="flex items-center gap-2 text-sm font-medium text-foreground">
+                <Icon className="w-5 h-5 text-accent" />
+                {label}
+              </div>
+            </FadeIn>
+          ))}
         </div>
       </section>
 
@@ -310,6 +354,9 @@ function CityContent({ city }: { city: CityInfo }) {
                   <h3 className="text-display text-lg mb-2 group-hover:text-accent transition-colors">
                     {s.name}
                   </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    {s.shortDesc}
+                  </p>
                   <span className="text-accent text-sm font-medium flex items-center gap-1">
                     Learn more <ArrowRight className="w-4 h-4" />
                   </span>

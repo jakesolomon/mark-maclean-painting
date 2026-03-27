@@ -25,7 +25,7 @@ const Footer = () => (
             className="h-10 w-auto brightness-0 invert mb-2"
           />
           <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
-            Professional painting services for the Merrimack Valley. Licensed, insured, and committed to quality craftsmanship.
+            Professional painting services for the Merrimack Valley. Fully insured and committed to quality craftsmanship.
           </p>
           <p className="text-primary-foreground/70 text-sm mb-6">{PHONE_NUMBER}</p>
           <div className="flex items-center gap-4">

@@ -81,15 +81,15 @@ const LeadCaptureForm = () => {
       )}
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <input name="name" placeholder="Full Name" className="input-underline" />
+          <input name="name" placeholder="Full Name" maxLength={100} className="input-underline" />
           {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}
         </div>
         <div>
-          <input name="phone" type="tel" placeholder="Phone Number" className="input-underline" />
+          <input name="phone" type="tel" placeholder="Phone Number" maxLength={20} className="input-underline" />
           {errors.phone && <p className="text-destructive text-sm mt-1">{errors.phone}</p>}
         </div>
         <div>
-          <input name="email" type="email" placeholder="Email (optional)" className="input-underline" />
+          <input name="email" type="email" placeholder="Email (optional)" maxLength={254} className="input-underline" />
         </div>
         <div>
           <select name="service" className="input-underline" defaultValue="">
@@ -106,7 +106,7 @@ const LeadCaptureForm = () => {
           {errors.service && <p className="text-destructive text-sm mt-1">{errors.service}</p>}
         </div>
         <div>
-          <textarea name="message" placeholder="Tell us about your project" rows={3} className="input-underline resize-none" />
+          <textarea name="message" placeholder="Tell us about your project" rows={3} maxLength={1000} className="input-underline resize-none" />
           {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
         </div>
         <button type="submit" disabled={loading} className="btn-cta w-full text-center disabled:opacity-60">
