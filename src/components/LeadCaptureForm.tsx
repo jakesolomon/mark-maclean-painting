@@ -81,20 +81,27 @@ const LeadCaptureForm = () => {
         <p className="text-destructive text-sm mb-4 p-3 bg-destructive/10 rounded-md">{serverError}</p>
       )}
       <form onSubmit={handleSubmit} className="space-y-6">
-        <input name="website" type="text" autoComplete="off" tabIndex={-1} aria-hidden="true" className="absolute opacity-0 h-0 w-0 pointer-events-none" />
+        <div className="absolute left-[-10000px] w-px h-px overflow-hidden">
+          <label htmlFor="website">Website</label>
+          <input id="website" name="website" type="text" autoComplete="off" tabIndex={-1} aria-hidden="true" />
+        </div>
         <div>
-          <input name="name" placeholder="Full Name" maxLength={100} className="input-underline" />
+          <label htmlFor="name" className="sr-only">Full Name</label>
+          <input id="name" name="name" placeholder="Full Name" maxLength={100} className="input-underline" />
           {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}
         </div>
         <div>
-          <input name="phone" type="tel" placeholder="Phone Number" maxLength={20} className="input-underline" />
+          <label htmlFor="phone" className="sr-only">Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="Phone Number" maxLength={20} className="input-underline" />
           {errors.phone && <p className="text-destructive text-sm mt-1">{errors.phone}</p>}
         </div>
         <div>
-          <input name="email" type="email" placeholder="Email (optional)" maxLength={254} className="input-underline" />
+          <label htmlFor="email" className="sr-only">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email (optional)" maxLength={254} className="input-underline" />
         </div>
         <div>
-          <select name="service" className="input-underline" defaultValue="">
+          <label htmlFor="service" className="sr-only">Service</label>
+          <select id="service" name="service" className="input-underline" defaultValue="">
             <option value="" disabled>Select a Service</option>
             <option>Exterior Painting</option>
             <option>Interior Painting</option>
@@ -108,7 +115,8 @@ const LeadCaptureForm = () => {
           {errors.service && <p className="text-destructive text-sm mt-1">{errors.service}</p>}
         </div>
         <div>
-          <textarea name="message" placeholder="Tell us about your project" rows={3} maxLength={1000} className="input-underline resize-none" />
+          <label htmlFor="message" className="sr-only">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your project" rows={3} maxLength={1000} className="input-underline resize-none" />
           {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
         </div>
         <button type="submit" disabled={loading} className="btn-cta w-full text-center disabled:opacity-60">
