@@ -38,7 +38,7 @@ const UtilityBar = () => (
             <Link href="/areas" className="font-medium text-foreground hover:text-accent transition-colors">Areas</Link>
             <Link href="/gallery" className="font-medium text-foreground hover:text-accent transition-colors">Gallery</Link>
           </nav>
-          <a href={`tel:${PHONE_NUMBER.replace(/[^0-9]/g, "")}`} className="flex items-center gap-2 text-sm font-medium text-primary">
+          <a href={`tel:${PHONE_NUMBER.replace(/[^0-9]/g, "")}`} aria-label={`Call ${PHONE_NUMBER}`} className="flex items-center gap-2 text-sm font-medium text-primary">
             <Phone className="w-4 h-4" />
             <span className="hidden sm:inline">{PHONE_NUMBER}</span>
           </a>
