@@ -41,6 +41,7 @@ const LeadCaptureForm = () => {
           email: form.get("email"),
           service: form.get("service"),
           message: form.get("message"),
+          website: form.get("website"),
         }),
       });
 
@@ -80,6 +81,7 @@ const LeadCaptureForm = () => {
         <p className="text-destructive text-sm mb-4 p-3 bg-destructive/10 rounded-md">{serverError}</p>
       )}
       <form onSubmit={handleSubmit} className="space-y-6">
+        <input name="website" type="text" autoComplete="off" tabIndex={-1} aria-hidden="true" className="absolute opacity-0 h-0 w-0 pointer-events-none" />
         <div>
           <input name="name" placeholder="Full Name" maxLength={100} className="input-underline" />
           {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}

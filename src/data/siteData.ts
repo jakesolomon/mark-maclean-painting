@@ -1,5 +1,6 @@
 export const PHONE_NUMBER = "(978) 912-4271";
 export const BUSINESS_NAME = "Mark MacLean Painting";
+export const EMAIL_ADDRESS = "m.macleanpainting@gmail.com";
 
 export interface WhyChooseItem {
   icon: string;

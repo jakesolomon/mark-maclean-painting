@@ -12,7 +12,12 @@ const ses = new SESClient({
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, phone, email, service, message } = body;
+    const { name, phone, email, service, message, website } = body;
+
+    // Honeypot — real users never fill this field
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     if (!name || !phone || !service || !message) {
       return NextResponse.json(

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Facebook } from "lucide-react";
-import { services, cities, BUSINESS_NAME, PHONE_NUMBER } from "@/data/siteData";
+import { services, cities, BUSINESS_NAME, PHONE_NUMBER, EMAIL_ADDRESS } from "@/data/siteData";
 
 const GoogleIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -20,14 +20,17 @@ const Footer = () => (
           <Image
             src="/logo.webp"
             alt={BUSINESS_NAME}
-            width={140}
-            height={56}
-            className="h-10 w-auto brightness-0 invert mb-2"
+            width={220}
+            height={88}
+            className="h-20 w-auto brightness-0 invert mb-2"
           />
           <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
             Professional painting services for the Merrimack Valley. Fully insured and committed to quality craftsmanship.
           </p>
-          <p className="text-primary-foreground/70 text-sm mb-6">{PHONE_NUMBER}</p>
+          <p className="text-primary-foreground/70 text-sm">{PHONE_NUMBER}</p>
+          <p className="text-primary-foreground/70 text-sm mb-6">
+            <a href={`mailto:${EMAIL_ADDRESS}`} className="hover:text-accent transition-colors">{EMAIL_ADDRESS}</a>
+          </p>
           <div className="flex items-center gap-4">
             <a href="https://www.instagram.com/mmacleanpainting/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-primary-foreground/60 hover:text-accent transition-colors">
               <Instagram className="w-5 h-5" />
@@ -70,6 +73,7 @@ const Footer = () => (
             <li><Link href="/services" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">All Services</Link></li>
             <li><Link href="/areas" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Areas Served</Link></li>
             <li><Link href="/gallery" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Gallery</Link></li>
+            <li><Link href="/contact" className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">Contact</Link></li>
           </ul>
         </div>
       </div>
