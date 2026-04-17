@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { Analytics } from '@vercel/analytics/next';
 import UtilityBar from "@/components/UtilityBar";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -50,6 +51,7 @@ export default function RootLayout({
         <UtilityBar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics/>
       </body>
     </html>
   );

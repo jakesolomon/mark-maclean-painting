@@ -23,9 +23,8 @@ Migrated from a Lovable-generated React/Vite SPA. Converting to Next.js 14 App R
 ## Site structure
 - / — Homepage
 - /services — Services hub
-- /services/[slug] — Individual service pages (exterior-painting, interior-painting, cabinet-painting, drywall-repair, wallpaper-hanging, wallpaper-removal, wood-staining, pressure-washing)
+- /[slug] — Individual service and city pages at root level (exterior-painting, interior-painting, cabinet-painting, drywall-repair, wallpaper-hanging, wallpaper-removal, wood-staining, pressure-washing, plus city slugs)
 - /areas — Areas hub
-- /[city] — City pages at root level
 - /gallery — Photo gallery
 - /contact — Contact page with estimate form
 
